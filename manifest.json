@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "دیوار - استخراج خودکار آمار آگهی‌ها",
+  "version": "2.1.0",
+  "description": "استخراج خودکار و سریع آمار عملکرد آگهی‌های دیوار (نمایش، بازدید، تماس، نشان‌کردن و رتبه) به فایل اکسل",
+  "permissions": ["activeTab", "scripting", "tabs"],
+  "host_permissions": ["https://divar.ir/*", "https://api.divar.ir/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "دیوار - استخراج آمار"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://divar.ir/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
